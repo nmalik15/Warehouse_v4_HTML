@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAREHOUSE ACCOUNTING SYSTEM</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <style>
+        body {
+            max-width: 95%;
+            margin: 10px auto;
+        }
+
+        .account-text {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="./index.html"> <img src="https://i.ibb.co/JjBPYnM/WAS.jpg" img width="300" alt="WAS"></a>
+            <a href="./balance.html" class="btn btn-link btn btn-lg">Balance</a>
+            <a href="./sale.html" class="btn active btn btn-lg">Sale</a>
+            <a href="./purchase.html" class="btn btn-link btn btn-lg">Purchase</a>
+            <a href="./history.html" class="btn btn-link btn btn-lg">History</a>
+        </section>
+        <section class="navbar-section">
+            <h6 class="account-text text-primary">Account: € </h6>
+            <h6 class="account-text text-primary">12500</h6>
+        </section>
+    </header>
+
+    <form action="/submit_sale" method="post">
+        <div class="form-group">
+            <label class="form-label" for="name">Product to Sell:</label>
+            <div class="typing-box">
+                <input class="form-input" type="text" name="name" id="name" placeholder="Milk" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="price">Price per Unit:</label>
+            <div class="typing-box">
+                <input class="form-input" type="number" name="price" id="price" placeholder="1" min="1" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="quantity">Quantity:</label>
+            <div class="typing-box">
+                <input class="form-input" type="number" name="quantity" id="quantity" placeholder="1" min="1" required>
+            </div>
+        </div>
+        <div class="button-action">
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </div>
+    </form>
+
+
+
+</body>
+</html>
